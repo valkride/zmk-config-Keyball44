@@ -93,7 +93,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "TRACKBALL_CTRL_UP";
             #binding-cells = <0>;
-            bindings = <&trackball_up &media_volume_up>;
+            bindings = <&trackball_up>;
             mods = <LEFT_CONTROL>;
         };
 
@@ -101,7 +101,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "TRACKBALL_CTRL_DOWN";
             #binding-cells = <0>;
-            bindings = <&trackball_down &media_volume_down>;
+            bindings = <&trackball_down>;
             mods = <LEFT_CONTROL>;
         };
 
@@ -109,7 +109,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "TRACKBALL_CTRL_LEFT";
             #binding-cells = <0>;
-            bindings = <&trackball_left &media_prev_track>;
+            bindings = <&trackball_left>;
             mods = <LEFT_CONTROL>;
         };
 
@@ -117,7 +117,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "TRACKBALL_CTRL_RIGHT";
             #binding-cells = <0>;
-            bindings = <&trackball_right &media_next_track>;
+            bindings = <&trackball_right>;
             mods = <LEFT_CONTROL>;
         };
 
@@ -125,7 +125,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_QUESTION";
             #binding-cells = <0>;
-            bindings = <&kp COMMA &kp QUESTION>;
+            bindings = <&kp COMMA>;
             mods = <LEFT_SHIFT>;
         };
 
@@ -133,7 +133,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_SEMI";
             #binding-cells = <0>;
-            bindings = <&kp DOT &kp SEMI>;
+            bindings = <&kp DOT>;
             mods = <LEFT_SHIFT>;
         };
     };
