@@ -57,6 +57,68 @@
             bindings = <&kp RIGHT>;
         };
 
+        // Media control behaviors
+        media_volume_up: media_volume_up {
+            compatible = "zmk,behavior-sensor-key-press";
+            label = "MEDIA_VOLUME_UP";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOL_UP>;
+        };
+
+        media_volume_down: media_volume_down {
+            compatible = "zmk,behavior-sensor-key-press";
+            label = "MEDIA_VOLUME_DOWN";
+            #binding-cells = <0>;
+            bindings = <&kp C_VOL_DOWN>;
+        };
+
+        media_next_track: media_next_track {
+            compatible = "zmk,behavior-sensor-key-press";
+            label = "MEDIA_NEXT_TRACK";
+            #binding-cells = <0>;
+            bindings = <&kp C_NEXT>;
+        };
+
+        media_prev_track: media_prev_track {
+            compatible = "zmk,behavior-sensor-key-press";
+            label = "MEDIA_PREV_TRACK";
+            #binding-cells = <0>;
+            bindings = <&kp C_PREV>;
+        };
+
+        // Conditional behaviors for trackball with CTRL
+        trackball_ctrl_up: trackball_ctrl_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TRACKBALL_CTRL_UP";
+            #binding-cells = <0>;
+            bindings = <&trackball_up>, <&media_volume_up>;
+            mods = <MOD_LCTRL>;
+        };
+
+        trackball_ctrl_down: trackball_ctrl_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TRACKBALL_CTRL_DOWN";
+            #binding-cells = <0>;
+            bindings = <&trackball_down>, <&media_volume_down>;
+            mods = <MOD_LCTRL>;
+        };
+
+        trackball_ctrl_left: trackball_ctrl_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TRACKBALL_CTRL_LEFT";
+            #binding-cells = <0>;
+            bindings = <&trackball_left>, <&media_prev_track>;
+            mods = <MOD_LCTRL>;
+        };
+
+        trackball_ctrl_right: trackball_ctrl_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TRACKBALL_CTRL_RIGHT";
+            #binding-cells = <0>;
+            bindings = <&trackball_right>, <&media_next_track>;
+            mods = <MOD_LCTRL>;
+        };
+
         cmqus: comma_question {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_QUESTION";
@@ -82,7 +144,7 @@
         default_layer {
             label = "QWRT";
             bindings = <
-&kp ESCAPE        &mt NUMBER_1 Q  &mt NUMBER_2 W    &mt NUMBER_3 E     &mt NUMBER_4 R  &mt N5 T                 &mt NUMBER_6 Y  &mt N7 U  &mt N8 I   &mt N9 O  &mt N0 P   &mt EQUAL MINUS
+&trackball_ctrl_up &trackball_ctrl_down &trackball_ctrl_left &trackball_ctrl_right
 &kp TAB           &kp A           &kp S             &kp D              &kp F           &kp G                    &kp H           &kp J     &kp K      &kp L     &kp SEMI   &mt GRAVE SQT
 &kp LEFT_SHIFT    &kp Z           &kp X             &kp C              &kp V           &kp B                    &kp N           &kp M     &kp COMMA  &kp DOT   &kp SLASH  &kp LEFT_GUI
 &kp LEFT_CONTROL  &kp LALT        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SPACE                     &kp SPACE  &kp ENTER                                                 &mt DEL BACKSPACE
