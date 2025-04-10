@@ -33,28 +33,28 @@
             compatible = "zmk,behavior-sensor-key-press";
             label = "TRACKBALL_UP";
             #binding-cells = <0>;
-            bindings = <&kp KC_UP>;
+            bindings = <&kp UP>;
         };
 
         trackball_down: trackball_down {
             compatible = "zmk,behavior-sensor-key-press";
             label = "TRACKBALL_DOWN";
             #binding-cells = <0>;
-            bindings = <&kp KC_DOWN>;
+            bindings = <&kp DOWN>;
         };
 
         trackball_left: trackball_left {
             compatible = "zmk,behavior-sensor-key-press";
             label = "TRACKBALL_LEFT";
             #binding-cells = <0>;
-            bindings = <&kp KC_LEFT>;
+            bindings = <&kp LEFT>;
         };
 
         trackball_right: trackball_right {
             compatible = "zmk,behavior-sensor-key-press";
             label = "TRACKBALL_RIGHT";
             #binding-cells = <0>;
-            bindings = <&kp KC_RIGHT>;
+            bindings = <&kp RIGHT>;
         };
 
         cmqus: comma_question {
