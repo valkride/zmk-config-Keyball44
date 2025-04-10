@@ -94,7 +94,7 @@
             label = "TRACKBALL_CTRL_UP";
             #binding-cells = <0>;
             bindings = <&trackball_up &media_volume_up>;
-            mods = <(MOD_LCTRL)>;
+            mods = <LEFT_CONTROL>;
         };
 
         trackball_ctrl_down: trackball_ctrl_down {
@@ -102,7 +102,7 @@
             label = "TRACKBALL_CTRL_DOWN";
             #binding-cells = <0>;
             bindings = <&trackball_down &media_volume_down>;
-            mods = <(MOD_LCTRL)>;
+            mods = <LEFT_CONTROL>;
         };
 
         trackball_ctrl_left: trackball_ctrl_left {
@@ -110,7 +110,7 @@
             label = "TRACKBALL_CTRL_LEFT";
             #binding-cells = <0>;
             bindings = <&trackball_left &media_prev_track>;
-            mods = <(MOD_LCTRL)>;
+            mods = <LEFT_CONTROL>;
         };
 
         trackball_ctrl_right: trackball_ctrl_right {
@@ -118,7 +118,7 @@
             label = "TRACKBALL_CTRL_RIGHT";
             #binding-cells = <0>;
             bindings = <&trackball_right &media_next_track>;
-            mods = <(MOD_LCTRL)>;
+            mods = <LEFT_CONTROL>;
         };
 
         cmqus: comma_question {
@@ -126,7 +126,7 @@
             label = "COMMA_QUESTION";
             #binding-cells = <0>;
             bindings = <&kp COMMA &kp QUESTION>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
+            mods = <LEFT_SHIFT | RIGHT_SHIFT>;
         };
 
         dtsmi: dot_semi {
@@ -134,7 +134,7 @@
             label = "DOT_SEMI";
             #binding-cells = <0>;
             bindings = <&kp DOT &kp SEMI>;
-            mods = <(MOD_LSFT | MOD_RSFT)>;
+            mods = <LEFT_SHIFT | RIGHT_SHIFT>;
         };
     };
 
