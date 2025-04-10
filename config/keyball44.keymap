@@ -120,6 +120,22 @@
             bindings = <&trackball_right &media_next_track>;
             mods = <LEFT_CONTROL>;
         };
+
+        cmqus: comma_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_QUESTION";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp QUESTION>;
+            mods = <LEFT_SHIFT>;
+        };
+
+        dtsmi: dot_semi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_SEMI";
+            #binding-cells = <0>;
+            bindings = <&kp DOT &kp SEMI>;
+            mods = <LEFT_SHIFT>;
+        };
     };
 
     keymap {
