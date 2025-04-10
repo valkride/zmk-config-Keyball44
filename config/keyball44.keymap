@@ -27,7 +27,6 @@
 &caps_word { continue-list = <UNDERSCORE MINUS>; };
 
 / {
-    // Custom behaviors for trackball movements
     behaviors {
         trackball_up: trackball_up {
             compatible = "zmk,behavior-sensor-key-press";
@@ -57,19 +56,18 @@
             bindings = <&kp RIGHT>;
         };
 
-        // Media control behaviors
         media_volume_up: media_volume_up {
             compatible = "zmk,behavior-sensor-key-press";
             label = "MEDIA_VOLUME_UP";
             #binding-cells = <0>;
-            bindings = <&kp C_VOL_UP>;
+            bindings = <&kp VOL_UP>;
         };
 
         media_volume_down: media_volume_down {
             compatible = "zmk,behavior-sensor-key-press";
             label = "MEDIA_VOLUME_DOWN";
             #binding-cells = <0>;
-            bindings = <&kp C_VOL_DOWN>;
+            bindings = <&kp VOL_DOWN>;
         };
 
         media_next_track: media_next_track {
@@ -86,7 +84,6 @@
             bindings = <&kp C_PREV>;
         };
 
-        // Conditional behaviors for trackball with CTRL
         trackball_ctrl_up: trackball_ctrl_up {
             compatible = "zmk,behavior-mod-morph";
             label = "TRACKBALL_CTRL_UP";
@@ -124,7 +121,6 @@
             label = "COMMA_QUESTION";
             #binding-cells = <0>;
             bindings = <&kp COMMA>, <&kp QUESTION>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -133,7 +129,6 @@
             label = "DOT_SEMI";
             #binding-cells = <0>;
             bindings = <&kp DOT>, <&kp SEMI>;
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
