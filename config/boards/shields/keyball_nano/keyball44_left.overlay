@@ -8,7 +8,6 @@
 
 &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
-    node-label = "Keyboard Matrix Scan";
     row-gpios = <&pro_micro 0 GPIO_ACTIVE_LOW>,
                 <&pro_micro 1 GPIO_ACTIVE_LOW>,
                 <&pro_micro 2 GPIO_ACTIVE_LOW>,
