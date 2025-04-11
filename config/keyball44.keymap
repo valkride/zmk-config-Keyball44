@@ -65,24 +65,28 @@
             compatible = "zmk,behavior-media-key";
             label = "MEDIA_VOLUME_UP";
             key-code = <VOL_UP>;
+            #binding-cells = <0>;
         };
 
         media_volume_down: media_volume_down {
             compatible = "zmk,behavior-media-key";
             label = "MEDIA_VOLUME_DOWN";
             key-code = <VOL_DOWN>;
+            #binding-cells = <0>;
         };
 
         media_next_track: media_next_track {
             compatible = "zmk,behavior-media-key";
             label = "MEDIA_NEXT_TRACK";
             key-code = <C_NEXT>;
+            #binding-cells = <0>;
         };
 
         media_prev_track: media_prev_track {
             compatible = "zmk,behavior-media-key";
             label = "MEDIA_PREV_TRACK";
             key-code = <C_PREV>;
+            #binding-cells = <0>;
         };
 
         trackball_ctrl_up: trackball_ctrl_up {
