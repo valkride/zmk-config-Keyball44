@@ -92,7 +92,7 @@
         trackball_ctrl_up: trackball_ctrl_up {
             compatible = "zmk,behavior-mod-morph";
             label = "TRACKBALL_CTRL_UP";
-            #binding-cells = <2>; // Updated to match the required number of bindings
+            #binding-cells = <2>;
             bindings = <&media_volume_up &kp UP>;
             mods = <LEFT_CONTROL>;
         };
@@ -100,7 +100,7 @@
         trackball_ctrl_down: trackball_ctrl_down {
             compatible = "zmk,behavior-mod-morph";
             label = "TRACKBALL_CTRL_DOWN";
-            #binding-cells = <2>; // Updated to match the required number of bindings
+            #binding-cells = <2>;
             bindings = <&media_volume_down &kp DOWN>;
             mods = <LEFT_CONTROL>;
         };
@@ -108,7 +108,7 @@
         trackball_ctrl_left: trackball_ctrl_left {
             compatible = "zmk,behavior-mod-morph";
             label = "TRACKBALL_CTRL_LEFT";
-            #binding-cells = <2>; // Updated to match the required number of bindings
+            #binding-cells = <2>;
             bindings = <&media_prev_track &kp LEFT>;
             mods = <LEFT_CONTROL>;
         };
@@ -116,7 +116,7 @@
         trackball_ctrl_right: trackball_ctrl_right {
             compatible = "zmk,behavior-mod-morph";
             label = "TRACKBALL_CTRL_RIGHT";
-            #binding-cells = <2>; // Updated to match the required number of bindings
+            #binding-cells = <2>;
             bindings = <&media_next_track &kp RIGHT>;
             mods = <LEFT_CONTROL>;
         };
@@ -124,8 +124,8 @@
         cmqus: comma_question {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_QUESTION";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>;
+            #binding-cells = <2>;
+            bindings = <&kp COMMA &kp QUESTION>;
             mods = <LEFT_SHIFT>;
         };
 
