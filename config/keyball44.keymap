@@ -132,8 +132,8 @@
         dtsmi: dot_semi {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_SEMI";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>;
+            #binding-cells = <2>;
+            bindings = <&kp DOT &kp SEMI>;
             mods = <LEFT_SHIFT>;
         };
     };
