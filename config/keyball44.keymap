@@ -92,7 +92,7 @@
         trackball_ctrl_up: trackball_ctrl_up {
             compatible = "zmk,behavior-mod-morph";
             label = "TRACKBALL_CTRL_UP";
-            #binding-cells = <0>;
+            #binding-cells = <1>; // Updated to match the required number of bindings
             bindings = <&media_volume_up>;
             mods = <LEFT_CONTROL>;
         };
@@ -100,7 +100,7 @@
         trackball_ctrl_down: trackball_ctrl_down {
             compatible = "zmk,behavior-mod-morph";
             label = "TRACKBALL_CTRL_DOWN";
-            #binding-cells = <0>;
+            #binding-cells = <1>; // Updated to match the required number of bindings
             bindings = <&media_volume_down>;
             mods = <LEFT_CONTROL>;
         };
@@ -108,7 +108,7 @@
         trackball_ctrl_left: trackball_ctrl_left {
             compatible = "zmk,behavior-mod-morph";
             label = "TRACKBALL_CTRL_LEFT";
-            #binding-cells = <0>;
+            #binding-cells = <1>; // Updated to match the required number of bindings
             bindings = <&media_prev_track>;
             mods = <LEFT_CONTROL>;
         };
@@ -116,7 +116,7 @@
         trackball_ctrl_right: trackball_ctrl_right {
             compatible = "zmk,behavior-mod-morph";
             label = "TRACKBALL_CTRL_RIGHT";
-            #binding-cells = <0>;
+            #binding-cells = <1>; // Updated to match the required number of bindings
             bindings = <&media_next_track>;
             mods = <LEFT_CONTROL>;
         };
