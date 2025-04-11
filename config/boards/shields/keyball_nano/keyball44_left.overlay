@@ -17,6 +17,24 @@
     row-gpios = <&pro_micro 21 GPIO_ACTIVE_HIGH>,
                 <&pro_micro 20 GPIO_ACTIVE_HIGH>,
                 <&pro_micro 19 GPIO_ACTIVE_HIGH>,
-                <&pro_micro 18 GPIO_ACTIVE_HIGH>; // Add row-gpios if missing
+                <&pro_micro 18 GPIO_ACTIVE_HIGH>;
     diode-direction = "col2row"; // Ensure diode direction is defined
+};
+
+// Add missing behaviors or bindings
+&behaviors {
+    media_volume_up {
+        compatible = "zmk,behavior-media-key";
+        label = "Media Volume Up Behavior";
+        key-code = <0x80>; // HID code for volume up
+        #binding-cells = <0>;
+    };
+
+    trackball_ctrl_up {
+        compatible = "zmk,behavior-mod-morph";
+        label = "Trackball Control Up Behavior";
+        #binding-cells = <2>;
+        bindings = <&media_volume_up &kp UP>;
+        mods = <LEFT_CONTROL>;
+    };
 };
