@@ -25,14 +25,12 @@
 &behaviors {
     media_volume_up {
         compatible = "zmk,behavior-media-key";
-        label = "Media Volume Up Behavior";
         key-code = <0x80>; // HID code for volume up
         #binding-cells = <0>;
     };
 
     trackball_ctrl_up {
         compatible = "zmk,behavior-mod-morph";
-        label = "Trackball Control Up Behavior";
         #binding-cells = <2>;
         bindings = <&media_volume_up &kp UP>;
         mods = <LEFT_CONTROL>;
