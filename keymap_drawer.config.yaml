@@ -50,52 +50,6 @@ draw_config:
       opacity: 1.0;
     }
 
-    /* Toggle */
-    .toggle.shifted {
-      translate: -10px 12px;
-    }
-
-    .toggle.hold {
-      translate: 13px -23px;
-    }
-
-    /* Variant for tap-dances */
-    .tap_dance.tap {
-      translate: -7px 0px;
-      font-size: 12px;
-    }
-    .tap_dance.shifted {
-      translate: 7px 17px;
-      font-size: 12px;
-      opacity: 1.0;
-    }
-
-    /* Variant for symbol next to symbol */
-    .sym_by_sym.tap {
-      translate: -6px 0px;
-    }
-    .sym_by_sym.shifted {
-      translate: 10px 12px;
-      opacity: 1.0;
-    }
-
-    .combo.sym_by_sym.tap {
-      translate: -35px 0px;
-    }
-    .combo.sym_by_sym.shifted {
-      translate: 35px 20px;
-      opacity: 1.0;
-    }
-
-    .combo.sym_by_sym.hold {
-      visibility: hidden;
-    }
-
-    /* hide hold box for combo sym_by_sym */
-    .combo.sym_by_sym.hold > path[stroke="none"][fill="none"] {
-      visibility: hidden;
-    }
-
   shrink_wide_legends: 6
   glyph_tap_size: 18
   glyph_hold_size: 15
@@ -117,19 +71,19 @@ parse_config:
     type: trans
 
   raw_binding_map:
-# Add the dot_semi behavior
+    # Add the dot_semi behavior
     "&dot_semi":
       tap: "."
       shifted: ";"
 
-    # Add the comma_question behavior
+    # Add the comma_question behavior (if not already present)
     "&comma_question":
       tap: ","
       shifted: "?"
 
     # Layers
     "&ltq 1 BACKSPACE":
-      tap:  $$mdi:backspace$$
+      tap: $$mdi:backspace$$
       hold: '$$mdi:navigation-variant$$'
     "&ltq 3 TAB":
       tap: $$mdi:keyboard-tab$$
@@ -143,6 +97,7 @@ parse_config:
     "&ltq 1 DELETE":
       tap: $$mdi:backspace-reverse-outline$$
       hold: $$mdi:navigation-variant$$
+
     # Home rows
     "&hm LEFT_GUI A":
       tap: 'A'
@@ -165,49 +120,31 @@ parse_config:
     "&hm RIGHT_ALT L":
       tap: 'L'
       shifted: $$mdi:apple-keyboard-option$$
-    # self behaviors
-    "&hm LG(LS(V)) P":
-      tap: 'P'
-      shifted: $$mdi:content-copy$$
+
     # Mouse
     "&msc SCRL_UP":
       tap: $$mdi:pan-up$$
-      hold: ''
-      shifted: ''
     "&msc SCRL_DOWN":
       tap: $$mdi:pan-down$$
-      hold: ''
-      shifted: ''
     "&msc SCRL_LEFT":
       tap: $$mdi:pan-left$$
-      hold: ''
-      shifted: ''
     "&msc SCRL_RIGHT":
       tap: $$mdi:pan-right$$
-      hold: ''
-      shifted: ''
     "&mmv MOVE_LEFT":
       tap: $$mdi:menu-left$$
-      hold: ''
-      shifted: $$mdi:mouse$$
     "&mmv MOVE_RIGHT":
       tap: $$mdi:menu-right$$
-      hold: ''
-      shifted: $$mdi:mouse$$
     "&mmv MOVE_UP":
       tap: $$mdi:menu-up$$
-      hold: ''
-      shifted: $$mdi:mouse$$
     "&mmv MOVE_DOWN":
       tap: $$mdi:menu-down$$
-      hold: ''
-      shifted: $$mdi:mouse$$
     "&mkp LCLK":
       tap: $$mdi:mouse-left-click-outline$$
     "&mkp RCLK":
       tap: $$mdi:mouse-right-click-outline$$
     "&mkp MCLK":
       tap: $$mdi:mouse-scroll-wheel$$
+
     # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
     "&kt RSHIFT":
@@ -258,6 +195,7 @@ parse_config:
       shifted: $$mdi:bluetooth-connect$$
       tap: ""
       hold: $$mdi:arrow-down-bold$$
+
     # Reset
     "&sys_reset":
       type: bootloader
