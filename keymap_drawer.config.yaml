@@ -17,7 +17,7 @@ draw_config:
   append_colon_to_layer_header: true
   small_pad: 2.0
   svg_extra_style: |
-    /* For default sytles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
+    /* For default styles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
 
     svg.keymap {
       font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
@@ -117,6 +117,11 @@ parse_config:
     type: trans
 
   raw_binding_map:
+    # Add the comma_question behavior
+    "&comma_question":
+      tap: ","
+      shifted: "?"
+
     # Layers
     "&ltq 1 BACKSPACE":
       tap:  $$mdi:backspace$$
