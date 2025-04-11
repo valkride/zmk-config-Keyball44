@@ -62,31 +62,27 @@
         };
 
         media_volume_up: media_volume_up {
-            compatible = "zmk,behavior-sensor-key-press";
+            compatible = "zmk,behavior-media-key";
             label = "MEDIA_VOLUME_UP";
-            #binding-cells = <0>;
-            bindings = <&kp VOL_UP>;
+            key-code = <VOL_UP>;
         };
 
         media_volume_down: media_volume_down {
-            compatible = "zmk,behavior-sensor-key-press";
+            compatible = "zmk,behavior-media-key";
             label = "MEDIA_VOLUME_DOWN";
-            #binding-cells = <0>;
-            bindings = <&kp VOL_DOWN>;
+            key-code = <VOL_DOWN>;
         };
 
         media_next_track: media_next_track {
-            compatible = "zmk,behavior-sensor-key-press";
+            compatible = "zmk,behavior-media-key";
             label = "MEDIA_NEXT_TRACK";
-            #binding-cells = <0>;
-            bindings = <&kp C_NEXT>;
+            key-code = <C_NEXT>;
         };
 
         media_prev_track: media_prev_track {
-            compatible = "zmk,behavior-sensor-key-press";
+            compatible = "zmk,behavior-media-key";
             label = "MEDIA_PREV_TRACK";
-            #binding-cells = <0>;
-            bindings = <&kp C_PREV>;
+            key-code = <C_PREV>;
         };
 
         trackball_ctrl_up: trackball_ctrl_up {
