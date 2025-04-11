@@ -26,42 +26,13 @@ draw_config:
       text-rendering: optimizeLegibility;
     }
 
-    /* Color accent for held keys */
-    rect.held, rect.combo.held {
-        fill: #ffc;
-    }
-
-    /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
-    .sym_sub_text.tap {
-      translate: -5px 2px;
-      font-size: 20px;
-    }
-    .sym_sub_text.shifted {
-      translate: 10px 13px;
-      font-size: 10px;
-      opacity: 1.0;
-    }
-    .combo.sym_sub_text.tap {
-      translate: -1px 1px;
-    }
-    .combo.sym_sub_text.shifted {
-      translate: 7px 5px;
-      font-size: 10px;
-      opacity: 1.0;
-    }
-
-  shrink_wide_legends: 6
-  glyph_tap_size: 18
-  glyph_hold_size: 15
-  glyph_shifted_size: 15
-  glyphs: {}
-  glyph_urls:
-    tabler: https://unpkg.com/@tabler/icons/icons/outline/{}.svg
-    tablerf: https://unpkg.com/@tabler/icons/icons/filled/{}.svg
-    mdi: https://raw.githubusercontent.com/Templarian/MaterialDesign-SVG/master/svg/{}.svg
-    mdil: https://raw.githubusercontent.com/Pictogrammers/MaterialDesignLight/master/svg/{}.svg
-    material: https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/{}/default/48px.svg
-  use_local_cache: true
+  raw_binding_map:
+    "&dot_semi":
+      tap: "."
+      shifted: ";"
+    "&comma_question":
+      tap: ","
+      shifted: "?"
 
 parse_config:
   mark_alternate_layer_activators: true
