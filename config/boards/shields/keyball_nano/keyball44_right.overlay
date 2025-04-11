@@ -63,7 +63,8 @@
 
 / {
     trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
+        compatible = "zmk,input-listener"; // Ensure this is supported
+        device = <&trackball>; // Link to the trackball device
+        bindings = <&trackball_ctrl_up>, <&media_volume_up>; // Add behavior bindings
     };
 };
