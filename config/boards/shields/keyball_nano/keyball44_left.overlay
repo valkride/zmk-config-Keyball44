@@ -21,18 +21,20 @@
     diode-direction = "col2row"; // Ensure diode direction is defined
 };
 
-// Add missing behaviors or bindings
-&behaviors {
-    media_volume_up {
-        compatible = "zmk,behavior-media-key";
-        key-code = <0x80>; // HID code for volume up
-        #binding-cells = <0>;
-    };
+// Define the behaviors node
+/ {
+    behaviors {
+        media_volume_up {
+            compatible = "zmk,behavior-media-key";
+            key-code = <0x80>; // HID code for volume up
+            #binding-cells = <0>;
+        };
 
-    trackball_ctrl_up {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <2>;
-        bindings = <&media_volume_up &kp UP>;
-        mods = <LEFT_CONTROL>;
+        trackball_ctrl_up {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <2>;
+            bindings = <&media_volume_up &kp UP>;
+            mods = <LEFT_CONTROL>;
+        };
     };
 };
